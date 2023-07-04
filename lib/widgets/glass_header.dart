@@ -9,9 +9,9 @@ import '../styles/colors.dart';
 
 class GlassHeader extends StatelessWidget {
   final String? title;
-  final List<Widget>? actions;
+  final Function(HeaderActionTypes) onActionClick;
 
-  const GlassHeader({super.key, this.title, this.actions});
+  const GlassHeader({super.key, this.title, required this.onActionClick});
 
   @override
   Widget build(BuildContext context) {
@@ -69,28 +69,36 @@ class GlassHeader extends StatelessWidget {
             overflow: TextOverflow.ellipsis),
         const Spacer(),
         TextButton.icon(
-            onPressed: () {},
+            onPressed: () {
+              onActionClick.call(HeaderActionTypes.about);
+            },
             icon: const Icon(
               BoxIcons.bxs_user,
               size: 20,
             ),
             label: const Text("ABOUT")),
         TextButton.icon(
-            onPressed: () {},
+            onPressed: () {
+              onActionClick.call(HeaderActionTypes.skills);
+            },
             icon: const Icon(
               BoxIcons.bxs_graduation,
               size: 20,
             ),
             label: const Text("SKILLS")),
         TextButton.icon(
-            onPressed: () {},
+            onPressed: () {
+              onActionClick.call(HeaderActionTypes.portfolio);
+            },
             icon: const Icon(
               BoxIcons.bx_book_reader,
               size: 20,
             ),
             label: const Text("PORTFOLIO")),
         TextButton.icon(
-            onPressed: () {},
+            onPressed: () {
+              onActionClick.call(HeaderActionTypes.contact);
+            },
             icon: const Icon(
               BoxIcons.bx_message_square_detail,
               size: 20,
@@ -98,7 +106,9 @@ class GlassHeader extends StatelessWidget {
             label: const Text("CONTACT")),
         const Gap(16),
         OutlinedButton.icon(
-            onPressed: () {},
+            onPressed: () {
+              onActionClick.call(HeaderActionTypes.resume);
+            },
             icon: const Icon(
               BoxIcons.bx_download,
               size: 20,
@@ -108,3 +118,5 @@ class GlassHeader extends StatelessWidget {
     );
   }
 }
+
+enum HeaderActionTypes { about, skills, contact, resume, portfolio }
