@@ -1,4 +1,8 @@
 import 'package:flutter/material.dart';
+import 'package:portfolio/widgets/section_name_vertical.dart';
+import 'package:portfolio/widgets/social_button.dart';
+
+import '../constants/app_constants.dart';
 
 class VerticalSocials extends StatelessWidget {
   const VerticalSocials({super.key});
@@ -6,7 +10,17 @@ class VerticalSocials extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return Column(
-      children: [],
+      children: [
+        ...List.generate(
+          AppConstants.urlsAndIcons.length,
+          (index) {
+            return SocialButton(urlIcon: AppConstants.urlsAndIcons[index]);
+          },
+        ),
+        const SectionNameVertical(
+          name: "FOLLOW ME",
+        ),
+      ],
     );
   }
 }

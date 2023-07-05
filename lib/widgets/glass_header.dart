@@ -17,7 +17,7 @@ class GlassHeader extends StatelessWidget {
   Widget build(BuildContext context) {
     return ClipRRect(
       child: BackdropFilter(
-        filter: ImageFilter.blur(sigmaX: 16, sigmaY: 16),
+        filter: ImageFilter.blur(sigmaX: 10, sigmaY: 10),
         child: Container(
           decoration: BoxDecoration(
             color: AppColors.background.withOpacity(0.1),
@@ -26,10 +26,9 @@ class GlassHeader extends StatelessWidget {
           width: double.infinity,
           child: Padding(
             padding: const EdgeInsets.symmetric(horizontal: 24),
-            child: Responsive(
-                tablet: buildMobileRow(),
-                mobile: buildMobileRow(),
-                desktop: buildDesktopRow()),
+            child: Responsive.hideMenu(context)
+                ? buildDesktopRow()
+                : buildMobileRow(),
           ),
         ),
       ),

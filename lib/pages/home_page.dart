@@ -1,5 +1,5 @@
 import 'package:flutter/material.dart';
-import 'package:portfolio/styles/colors.dart';
+import 'package:portfolio/pages/sections/home_section.dart';
 import 'package:scrollable_positioned_list/scrollable_positioned_list.dart';
 
 import '../widgets/glass_header.dart';
@@ -15,19 +15,16 @@ class HomePage extends StatelessWidget {
       body: Stack(
         children: [
           ScrollablePositionedList.builder(
-              itemCount: 500,
-              itemBuilder: (context, index) => Container(
-                    color: AppColors.primary,
-                    height: 120,
-                    margin: const EdgeInsets.all(12),
-                    child: Center(
-                        child: Text(
-                      index.toString(),
-                      style: const TextStyle(color: Colors.black),
-                    )),
-                  ),
+              itemCount: 20,
               padding: const EdgeInsets.only(top: 80),
-              itemScrollController: itemScrollController),
+              itemScrollController: itemScrollController,
+              itemBuilder: (context, index) {
+                if (index != 0) {
+                  return const HomeSection();
+                } else {
+                  return const SizedBox();
+                }
+              }),
           GlassHeader(
             title: "Oraz Gulchayew",
             onActionClick: (type) {
