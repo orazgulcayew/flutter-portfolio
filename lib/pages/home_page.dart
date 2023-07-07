@@ -1,5 +1,7 @@
 import 'package:flutter/material.dart';
+import 'package:portfolio/pages/sections/about_section.dart';
 import 'package:portfolio/pages/sections/home_section.dart';
+import 'package:portfolio/pages/sections/skills_section.dart';
 import 'package:scrollable_positioned_list/scrollable_positioned_list.dart';
 
 import '../widgets/glass_header.dart';
@@ -19,8 +21,12 @@ class HomePage extends StatelessWidget {
               padding: const EdgeInsets.only(top: 80),
               itemScrollController: itemScrollController,
               itemBuilder: (context, index) {
-                if (index != 0) {
+                if (index == 0) {
                   return const HomeSection();
+                } else if (index == 1) {
+                  return const AboutSection();
+                } else if (index == 2) {
+                  return const SkillsSection();
                 } else {
                   return const SizedBox();
                 }
@@ -39,10 +45,10 @@ class HomePage extends StatelessWidget {
   void handleActionClick(HeaderActionTypes type) {
     switch (type) {
       case HeaderActionTypes.about:
-        scrollTo(150);
+        scrollTo(1);
         break;
       case HeaderActionTypes.skills:
-        scrollTo(14);
+        scrollTo(2);
         break;
       case HeaderActionTypes.contact:
         scrollTo(24);

@@ -13,6 +13,8 @@ class GlassHeader extends StatelessWidget {
 
   const GlassHeader({super.key, this.title, required this.onActionClick});
 
+  static const double height = 70;
+
   @override
   Widget build(BuildContext context) {
     return ClipRRect(
@@ -22,7 +24,7 @@ class GlassHeader extends StatelessWidget {
           decoration: BoxDecoration(
             color: AppColors.background.withOpacity(0.1),
           ),
-          height: 70,
+          height: height,
           width: double.infinity,
           child: Padding(
             padding: const EdgeInsets.symmetric(horizontal: 24),

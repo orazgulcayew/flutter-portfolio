@@ -1,9 +1,11 @@
 import 'package:flutter/material.dart';
+import 'package:portfolio/widgets/glass_header.dart';
 import 'package:portfolio/widgets/greetings.dart';
 import 'package:portfolio/widgets/responsive.dart';
 import 'package:portfolio/widgets/verical_socials.dart';
 
 import '../../widgets/portfolio_image.dart';
+import '../../widgets/section_name_vertical.dart';
 
 class HomeSection extends StatelessWidget {
   const HomeSection({super.key});
@@ -11,9 +13,10 @@ class HomeSection extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     final size = MediaQuery.of(context).size;
-    return SizedBox(
-      height: size.height * 0.8,
+    return Container(
+      height: size.height - GlassHeader.height,
       width: size.width,
+      padding: const EdgeInsets.only(bottom: 60),
       child: Align(
         alignment: Responsive.isMobile(context)
             ? Alignment.center
@@ -27,8 +30,13 @@ class HomeSection extends StatelessWidget {
                   if (!Responsive.isMobile(context))
                     Padding(
                       padding:
-                          EdgeInsets.symmetric(horizontal: size.width * 0.05),
-                      child: const VerticalSocials(),
+                          EdgeInsets.symmetric(horizontal: size.width * 0.07),
+                      child: Column(
+                        children: const [
+                          VerticalSocials(),
+                          SectionNameVertical(name: "FOLLOW ME"),
+                        ],
+                      ),
                     ),
                   const HomeSectionGreetings(),
                   if (!Responsive.isMobile(context))
