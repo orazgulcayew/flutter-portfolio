@@ -61,7 +61,7 @@ class HomeSectionGreetings extends StatelessWidget {
         ),
         const Gap(24),
         buildActions(),
-        const Gap(24),
+        const Gap(48),
         const SizedBox(width: 200, height: 200, child: PortfolioImage()),
         const Gap(48),
         const HorizontalSocials()

@@ -33,7 +33,7 @@ class HomeSection extends StatelessWidget {
                   const HomeSectionGreetings(),
                   if (!Responsive.isMobile(context))
                     const Padding(
-                      padding: EdgeInsets.symmetric(horizontal: 32),
+                      padding: EdgeInsets.symmetric(horizontal: 54),
                       child: PortfolioImage(),
                     )
                 ],
