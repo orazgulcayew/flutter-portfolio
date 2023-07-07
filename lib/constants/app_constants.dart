@@ -30,18 +30,18 @@ class AppConstants {
   I stay up to date with the latest mobile development trends, ensuring high-quality code, performance, and user satisfaction. 
   Thank you for visiting! Explore my projects and feel free to reach out for collaboration opportunities. Let's bring your ideas to life!''';
 
-  static const dart = "icons/dart.svg";
-  static const flutter = "icons/flutter.svg";
-  static const figma = "icons/figma.svg";
-  static const firebase = "icons/firebase.svg";
-  static const git = "icons/git.svg";
-  static const github = "icons/github.svg";
-  static const java = "icons/java.svg";
-  static const kotlin = "icons/kotlin.svg";
-  static const nodejs = "icons/nodejs.svg";
-  static const photoshop = "icons/photoshop.svg";
-  static const python = "icons/python.svg";
-  static const visualStudio = "icons/visual-studio.svg";
+  static const dart = "assets/icons/dart.svg";
+  static const flutter = "assets/icons/flutter.svg";
+  static const figma = "assets/icons/figma.svg";
+  static const firebase = "assets/icons/firebase.svg";
+  static const git = "assets/icons/git.svg";
+  static const github = "assets/icons/github.svg";
+  static const java = "assets/icons/java.svg";
+  static const kotlin = "assets/icons/kotlin.svg";
+  static const nodejs = "assets/icons/nodejs.svg";
+  static const photoshop = "assets/icons/photoshop.svg";
+  static const python = "assets/icons/python.svg";
+  static const visualStudio = "assets/icons/visual-studio.svg";
 
   static const skills = [
     dart,

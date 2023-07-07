@@ -2,7 +2,6 @@ import 'dart:math';
 
 import 'package:animate_gradient/animate_gradient.dart';
 import 'package:flutter/material.dart';
-import 'package:flutter_svg/svg.dart';
 
 import '../styles/colors.dart';
 
@@ -40,19 +39,20 @@ class SkillCard extends StatelessWidget {
             ),
           ),
         ),
+        // CustomPaint(
+        //   painter: DartIcon(),
+        //   size: const Size(40, 40),
+        // )
         Container(
-            width: 120,
-            height: 120,
-            padding: const EdgeInsets.all(20),
-            margin: const EdgeInsets.all(2),
-            decoration: BoxDecoration(
-                borderRadius: BorderRadius.circular(24),
-                color: AppColors.background.withOpacity(0.95)),
-            child: SvgPicture.asset(
-              location,
-              width: 70,
-              height: 70,
-            )),
+          width: 120,
+          height: 120,
+          padding: const EdgeInsets.all(20),
+          margin: const EdgeInsets.all(2),
+          decoration: BoxDecoration(
+              borderRadius: BorderRadius.circular(24),
+              color: AppColors.background.withOpacity(0.95)),
+          child: Image.network(location),
+        ),
       ],
     );
   }
