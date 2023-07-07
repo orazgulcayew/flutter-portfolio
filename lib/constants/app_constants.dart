@@ -17,9 +17,7 @@ class AppConstants {
       url: 'https://instagram.com/orazgulcayew',
     ),
     UrlIcon(
-      iconData: BoxIcons.bxl_twitter,
-      url: 'https://twitter.com/orazgulcayew',
-    )
+        iconData: BoxIcons.bxl_twitter, url: 'https://twitter.com/orazgulcayew')
   ];
 
   static const String aboutMe =
