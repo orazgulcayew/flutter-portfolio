@@ -2,7 +2,8 @@ import 'package:flutter/material.dart';
 import 'package:portfolio/styles/colors.dart';
 
 class PortfolioImage extends StatefulWidget {
-  const PortfolioImage({super.key});
+  final String url;
+  const PortfolioImage({super.key, required this.url});
 
   @override
   State<PortfolioImage> createState() => _PortfolioImageState();
@@ -59,7 +60,7 @@ class _PortfolioImageState extends State<PortfolioImage> {
             child: ClipRRect(
               borderRadius: BorderRadius.circular(24),
               child: Image.network(
-                "https://avatars.githubusercontent.com/u/97003268?v=4",
+                widget.url,
                 height: 240,
                 width: 240,
                 fit: BoxFit.cover,

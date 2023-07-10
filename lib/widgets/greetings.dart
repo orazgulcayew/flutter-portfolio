@@ -1,12 +1,14 @@
 import 'package:flutter/material.dart';
 import 'package:gap/gap.dart';
+import 'package:portfolio/constants/app_constants.dart';
 import 'package:portfolio/styles/colors.dart';
 import 'package:portfolio/widgets/horizontal_socials.dart';
 import 'package:portfolio/widgets/portfolio_image.dart';
 import 'package:portfolio/widgets/responsive.dart';
 
 class HomeSectionGreetings extends StatelessWidget {
-  const HomeSectionGreetings({super.key});
+  final Function() onAboutMeClicked;
+  const HomeSectionGreetings({super.key, required this.onAboutMeClicked});
 
   @override
   Widget build(BuildContext context) {
@@ -62,7 +64,10 @@ class HomeSectionGreetings extends StatelessWidget {
         const Gap(24),
         buildActions(),
         const Gap(48),
-        const SizedBox(width: 200, height: 200, child: PortfolioImage()),
+        const SizedBox(
+            width: 200,
+            height: 200,
+            child: PortfolioImage(url: AppConstants.myImage)),
         const Gap(48),
         const HorizontalSocials()
       ],
@@ -143,7 +148,7 @@ class HomeSectionGreetings extends StatelessWidget {
               )),
           const Gap(12),
           OutlinedButton(
-              onPressed: () {},
+              onPressed: onAboutMeClicked,
               style: OutlinedButton.styleFrom(minimumSize: const Size(160, 70)),
               child: const Text(
                 "About me",

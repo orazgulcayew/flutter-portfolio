@@ -22,7 +22,7 @@ class HomePage extends StatelessWidget {
               itemScrollController: itemScrollController,
               itemBuilder: (context, index) {
                 if (index == 0) {
-                  return const HomeSection();
+                  return HomeSection(onAboutMeClikced: () => scrollTo(1));
                 } else if (index == 1) {
                   return const AboutSection();
                 } else if (index == 2) {
@@ -65,6 +65,7 @@ class HomePage extends StatelessWidget {
   void scrollTo(int index) {
     itemScrollController.scrollTo(
         index: index,
+        alignment: 0.3,
         duration: const Duration(milliseconds: 500),
         curve: Curves.easeInOutCubic);
   }

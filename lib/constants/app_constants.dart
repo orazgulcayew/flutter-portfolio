@@ -19,14 +19,15 @@ class AppConstants {
     UrlIcon(
         iconData: BoxIcons.bxl_twitter, url: 'https://twitter.com/orazgulcayew')
   ];
+  static const myImage = "https://avatars.githubusercontent.com/u/97003268?v=4";
 
   static const String aboutMe =
-      ''' Welcome to my portfolio website! I'm [Your Name], a Flutter developer proficient in Kotlin, Java, Firebase, and UI/UX design with Figma and Adobe XD. 
-  I specialize in creating captivating mobile applications with Flutter, delivering seamless user experiences across Android and iOS platforms. My expertise extends to native Android development using Kotlin and Java. 
-  With Firebase, I integrate powerful features like authentication, real-time databases, and cloud messaging to ensure reliable and engaging app experiences. 
-  Beyond coding, I possess a keen eye for design, crafting intuitive user interfaces using Figma and Adobe XD. 
-  I stay up to date with the latest mobile development trends, ensuring high-quality code, performance, and user satisfaction. 
-  Thank you for visiting! Explore my projects and feel free to reach out for collaboration opportunities. Let's bring your ideas to life!''';
+      '''Hi, 👋 Welcome to my portfolio website! I'm Oraz Gulchayew, a Flutter developer proficient in Kotlin, Java, and UI/UX design with Figma and Adobe XD. 
+I specialize in creating captivating mobile applications with Flutter, delivering seamless user experiences across Android and iOS platforms. My expertise extends to native Android development using Kotlin and Java. 
+Beyond coding, I possess a keen eye for design, crafting intuitive user interfaces using Figma and Adobe XD. 
+I stay up to date with the latest mobile development trends, ensuring high-quality code, performance, and user satisfaction.''';
+
+  static const programming = "assets/icons/programming.svg";
 
   static const dart = "assets/icons/dart.svg";
   static const flutter = "assets/icons/flutter.svg";

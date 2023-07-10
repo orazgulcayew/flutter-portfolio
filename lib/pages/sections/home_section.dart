@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:portfolio/constants/app_constants.dart';
 import 'package:portfolio/widgets/glass_header.dart';
 import 'package:portfolio/widgets/greetings.dart';
 import 'package:portfolio/widgets/responsive.dart';
@@ -8,7 +9,8 @@ import '../../widgets/portfolio_image.dart';
 import '../../widgets/section_name_vertical.dart';
 
 class HomeSection extends StatelessWidget {
-  const HomeSection({super.key});
+  final Function() onAboutMeClikced;
+  const HomeSection({super.key, required this.onAboutMeClikced});
 
   @override
   Widget build(BuildContext context) {
@@ -38,11 +40,11 @@ class HomeSection extends StatelessWidget {
                         ],
                       ),
                     ),
-                  const HomeSectionGreetings(),
+                  HomeSectionGreetings(onAboutMeClicked: onAboutMeClikced),
                   if (!Responsive.isMobile(context))
                     const Padding(
                       padding: EdgeInsets.symmetric(horizontal: 54),
-                      child: PortfolioImage(),
+                      child: PortfolioImage(url: AppConstants.myImage),
                     )
                 ],
               ),
